@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM openjdk:19
 RUN adduser --system --group spring
 USER spring:spring
 ARG JAR_FILE=springboot-web.jar
