@@ -1,4 +1,4 @@
-FROM openjdk:19
+FROM openjdk:17
 RUN adduser --system  spring 
 USER spring:spring
 ARG JAR_FILE=target/springboot-web-0.0.1-SNAPSHOT.jar
