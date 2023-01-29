@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         cleanWs(cleanWhenSuccess: true, cleanWhenNotBuilt: true, cleanWhenFailure: true, cleanWhenAborted: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true)
+        sh './Contact_Manager/mvnw package'
       }
     }
 
