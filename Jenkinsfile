@@ -4,7 +4,12 @@ pipeline {
     stage('Build') {
       steps {
         sh 'ls && ./mvnw package'
-        cleanWs(cleanWhenSuccess: true, cleanWhenNotBuilt: true, cleanWhenFailure: true, cleanWhenAborted: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true)
+      }
+    }
+
+    stage('Delete workspace') {
+      steps {
+        deleteDir()
       }
     }
 
