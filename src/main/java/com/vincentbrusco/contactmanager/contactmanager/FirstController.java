@@ -1,4 +1,4 @@
-package com.vincentbrusco.springbootweb.springbootweb;
+package com.vincentbrusco.contactmanager.contactmanager;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
