@@ -3,13 +3,13 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'ls && ./mvnw package'
+        sh './mvnw package'
       }
     }
 
-    stage('Delete workspace') {
+    stage('Push to Master') {
       steps {
-        deleteDir()
+        git(url: 'https://github.com/Befcak/Contact_Manager', branch: 'master', credentialsId: 'contact_maanger_credential')
       }
     }
 
