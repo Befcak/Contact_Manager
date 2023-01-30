@@ -9,7 +9,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        sshCommand(command: 'cd /home/pi/Workspace/', remote: '192.168.37.30')
+        sshCommand(command: 'cd /home/pi/Workspace/', remote: 'pi@192.168.37.30')
       }
     }
 
