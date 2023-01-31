@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Temp') {
       steps {
         sh './mvnw package'
       }
@@ -10,6 +10,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sshCommand(command: 'cd /home/pi/Workspace/', remote: 'pi@192.168.37.30')
+
       }
     }
 
