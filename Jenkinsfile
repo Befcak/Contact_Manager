@@ -3,7 +3,14 @@ pipeline {
   stages {
     stage('Temp') {
       steps {
-        echo 'Temp'
+        sh './mvnw package'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sshCommand(command: 'cd /home/pi/Workspace/', remote: 'pi@192.168.37.30')
+
       }
     }
 
